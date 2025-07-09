@@ -1,0 +1,17 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_29_length_2426_cov_1.513286_589_795_- -             68 TIGR00001            TIGR00001     63   1.8e-22   73.5   9.9   1   1   7.4e-25     2e-22   73.3   9.9     2    63     5    66     4    66 0.99 -
+NODE_29_length_2426_cov_1.513286_823_1254_- -            143 TIGR00168            TIGR00168    165     2e-58  190.7   2.2   1   1   8.4e-61   2.3e-58  190.5   2.2    24   163     2   140     1   142 0.98 -
+NODE_60_length_2085_cov_1.325123_1_1464_- -            488 TIGR00418            TIGR00418    565  5.7e-160  527.8   1.7   1   1  2.4e-162  6.4e-160  527.7   1.7     1   468    23   488    23   488 0.98 -
+NODE_29_length_2426_cov_1.513286_177_530_- -            117 TIGR01032            TIGR01032    114   2.8e-50  163.4   6.4   1   1   1.2e-52   3.2e-50  163.2   6.4     1   114     1   114     1   114 0.99 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /media/ubuntu/abc/csm/DCVBin_project/marker_gene/auxiliary/marker.hmm
+# Target file:     /media/ubuntu/abc/csm/DCVBin_project/test/contigs_over2k.fasta.frag.faa
+# Option settings: /media/ubuntu/abc/csm/DCVBin_project/marker_gene/auxiliary/hmmer-3.3/src/hmmsearch --domtblout /media/ubuntu/abc/csm/DCVBin_project/test/contigs_over2k.fasta.hmmout --cut_tc --cpu 40 /media/ubuntu/abc/csm/DCVBin_project/marker_gene/auxiliary/marker.hmm /media/ubuntu/abc/csm/DCVBin_project/test/contigs_over2k.fasta.frag.faa 
+# Current dir:     /media/ubuntu/abc/csm/DCVBin_project
+# Date:            Tue Jun 17 17:55:24 2025
+# [ok]

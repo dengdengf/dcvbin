@@ -1,0 +1,3 @@
+[06/24/2025 07:53:39 PM] INFO: Running CheckM2 version 1.0.1
+[06/24/2025 07:53:39 PM] INFO: Running quality prediction workflow with 64 threads.
+[06/24/2025 07:53:39 PM] ERROR: DIAMOND database not found. Please download database using <checkm2 database --download>

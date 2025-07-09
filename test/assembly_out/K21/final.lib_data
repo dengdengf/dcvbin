@@ -1,0 +1,38 @@
+ë---
+max read length: 96
+nomerge max read length: 96
+average read length: 93.8444
+average coverage: 2.18662
+libraries:
+  - type:            paired-end
+    number:          1
+    orientation:     fr
+    left reads:
+      - '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test_1.fastq.00.0_0.cor.fastq.gz'
+    right reads:
+      - '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test_2.fastq.00.0_0.cor.fastq.gz'
+    single reads:
+      - '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test__unpaired.00.0_0.cor.fastq.gz'
+    data:
+      unmerged read length: 96
+      merged read length: 0
+      insert size mean: 0
+      insert size deviation: 0
+      insert size left quantile: 0
+      insert size right quantile: 0
+      insert size median: 0
+      insert size mad: 0
+      insert size distribution: {  }
+      pi threshold:    0
+      binary reads info:
+        binary converted: true
+        bin reads info file: '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/.bin_reads/INFO_0'
+        paired read prefix: '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/.bin_reads/paired_0'
+        merged read prefix: '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/.bin_reads/merged_0'
+        single read prefix: '/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/.bin_reads/single_0'
+        chunk num:       64
+      single reads mapped: false
+      library index:   0
+      number of reads: 323889
+      total nucleotides: 30395161
+...

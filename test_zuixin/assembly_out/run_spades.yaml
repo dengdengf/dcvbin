@@ -1,0 +1,170 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Before_start_X8F43ETZD5REQWK4V8DH1DFLKYOM8Q2M
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_1LOE28DQJRWT0SKDPT8W98F5TXQ6C2OD
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_t9p1mhiy
+  job_uuid: SPAdes_Read_error_correction_WYQ739Z3943JRTYG688X6AHYDETOZVVS
+  mpi_support: false
+  output_files:
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/corrected.yaml
+  path: /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/share/spades
+  - --max_threads
+  - '66'
+  - --output_dir
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_corrected_reads_compression_S5YO77C9TCIOV40F5V5Y1IKZ5MD8K9WO
+  mpi_support: false
+  output_files: []
+  path: /home/wangjingyuan/anaconda3/envs/vambnew/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_RW0ISI1ZZF7XXQHPPXWHOWHRZBXJALV0
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_BXEC8EA0YI8FCLE4NH26E59K6DGNMXQX
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K21/configs/config.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K21/configs/mda_mode.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K21/configs/meta_mode.info
+  config_dir: K21
+  del_after: []
+  job_uuid: hpcSPAdes_K21_6WTF1JJNWQB75B9ULDJBMA5GXVQY7QV3
+  mpi_support: true
+  output_files: []
+  path: /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/bin/{spades_core}
+  short_name: k21
+- STAGE: K33
+  args:
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K33/configs/config.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K33/configs/mda_mode.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K33/configs/meta_mode.info
+  config_dir: K33
+  del_after: []
+  job_uuid: hpcSPAdes_K33_M3UAAEI5SVQRNA094P2AZ5T8JLPM0B0U
+  mpi_support: true
+  output_files: []
+  path: /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/bin/{spades_core}
+  short_name: k33
+- STAGE: K55
+  args:
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/configs/config.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/configs/mda_mode.info
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/configs/meta_mode.info
+  config_dir: K55
+  del_after: []
+  job_uuid: hpcSPAdes_K55_QZJBQO7MPZ9HQPEHO6A0KF5ZNYLBRHZ2
+  mpi_support: true
+  output_files: []
+  path: /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/bin/{spades_core}
+  short_name: k55
+- STAGE: Copy files
+  args:
+  - /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/before_rr.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/before_rr.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/assembly_graph_after_simplification.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/assembly_graph_after_simplification.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/final_contigs.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/contigs.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/first_pe_contigs.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/first_pe_contigs.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/strain_graph.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/strain_graph.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/scaffolds.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/scaffolds.fasta
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/scaffolds.paths
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/scaffolds.paths
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/assembly_graph_with_scaffolds.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/assembly_graph_with_scaffolds.gfa
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/assembly_graph.fastg
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/assembly_graph.fastg
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/K55/final_contigs.paths
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_kec_80s0
+  job_uuid: SPAdes_Copy_files_AOFQCM9KAZ3A0VP2O3KJZFYAX0PWOMQC
+  mpi_support: false
+  output_files: []
+  path: /home/wangjingyuan/anaconda3/envs/vambnew/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_2GJK2CITF5JUJOF5X81HAIGGJ4YW9SZV
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /fs1/private/user/wangjingyuan/anaconda3/envs/vambnew/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/scaffolds.fasta
+  - --misc_dir
+  - /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_XDSSNMCO8B1JOPESVSS5X1TVC00EQW6S
+  mpi_support: false
+  output_files: []
+  path: /home/wangjingyuan/anaconda3/envs/vambnew/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_OPKLX4BFDLF1BS232ZIK3FMAIW4SAEGV
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

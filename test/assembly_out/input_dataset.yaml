@@ -1,0 +1,7 @@
+- "left reads":
+  - "/media/ubuntu/abc/csm/DCVBin_project/test/test_1.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/media/ubuntu/abc/csm/DCVBin_project/test/test_2.fastq.gz"
+  "type": "paired-end"

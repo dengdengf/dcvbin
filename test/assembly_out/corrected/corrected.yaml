@@ -1,0 +1,9 @@
+- "left reads":
+  - "/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test_1.fastq.00.0_0.cor.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test_2.fastq.00.0_0.cor.fastq.gz"
+  "single reads":
+  - "/media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/test__unpaired.00.0_0.cor.fastq.gz"
+  "type": "paired-end"

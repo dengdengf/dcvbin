@@ -1,0 +1,37 @@
+Command line: /home/wangjingyuan/anaconda3/envs/vambnew/bin/spades.py	--meta	-1	/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/test_1.fastq.gz	-2	/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/test_2.fastq.gz	-o	/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out	-t	66	
+
+System information:
+  SPAdes version: 4.2.0
+  Python version: 3.12.5
+  OS: Linux-5.4.0-100-generic-x86_64-with-glibc2.31
+
+Output dir: /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Metagenomic mode
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/test_1.fastq.gz']
+      right reads: ['/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/test_2.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21, 33, 55]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+  Assembly graph output will use GFA v1.2 format
+Other parameters:
+  Dir for temp files: /home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/tmp
+  Threads: 66
+  Memory limit (in Gb): 250
+

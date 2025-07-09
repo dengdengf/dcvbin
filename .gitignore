@@ -1,0 +1,6 @@
+*.csv
+*.fastq.gz
+*.bam
+*.sam
+*.bin
+*.hdf5

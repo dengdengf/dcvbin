@@ -1,0 +1,144 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_cf1cvztb
+  output_files:
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/corrected.yaml
+  path: /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/share/spades
+  - --max_threads
+  - '66'
+  - --output_dir
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /media/ubuntu/conda/anaconda3/envs/vambnew/bin/python
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K21/configs/config.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K21/configs/mda_mode.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K21/configs/meta_mode.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/bin/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K33/configs/config.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K33/configs/mda_mode.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K33/configs/meta_mode.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/bin/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/configs/config.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/configs/mda_mode.info
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/configs/meta_mode.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/bin/spades-core
+  short_name: k55
+- STAGE: Copy files
+  args:
+  - /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/share/spades/spades_pipeline/scripts/copy_files.py
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/before_rr.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/before_rr.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/assembly_graph_after_simplification.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/assembly_graph_after_simplification.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/final_contigs.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/contigs.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/first_pe_contigs.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/first_pe_contigs.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/strain_graph.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/strain_graph.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/scaffolds.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/scaffolds.fasta
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/scaffolds.paths
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/scaffolds.paths
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/assembly_graph_with_scaffolds.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/assembly_graph_with_scaffolds.gfa
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/assembly_graph.fastg
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/assembly_graph.fastg
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/K55/final_contigs.paths
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_he58iue5
+  output_files: []
+  path: /media/ubuntu/conda/anaconda3/envs/vambnew/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /media/ubuntu/abc/lzh/soft/SPAdes-3.15.4-Linux/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/scaffolds.fasta
+  - --misc_dir
+  - /media/ubuntu/abc/csm/DCVBin_project/test/assembly_out/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /media/ubuntu/conda/anaconda3/envs/vambnew/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

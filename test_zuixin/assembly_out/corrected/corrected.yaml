@@ -1,0 +1,9 @@
+- "left reads":
+  - "/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/test_1.fastq00.0_0.cor.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/test_2.fastq00.0_0.cor.fastq.gz"
+  "single reads":
+  - "/home/wangjingyuan/lyf/DCVBin_project/test_zuixin/assembly_out/corrected/test__unpaired00.0_0.cor.fastq.gz"
+  "type": "paired-end"
