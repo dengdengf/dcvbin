@@ -68,7 +68,7 @@ For the **CPT mode**, use the `my_method_fur.sh` script to run the process with 
 
 The `DNABERT_S-main` directory is too large for GitHub and has been uploaded to Figshare:
 
-**Download Link**: (https://figshare.com/articles/figure/DCVBin_-_Training_Data_and_Models_for_Metagenomic_Binning/30400258)]
+**Download Link**: (https://figshare.com/articles/figure/DCVBin_-_Training_Data_and_Models_for_Metagenomic_Binning/30400258)
 
 If you need to use CPT mode, you must:
 
