@@ -76,3 +76,8 @@ To run in CPT mode:
 bash my_method_fur.sh ./data/input ./data/output
 ```
 
+Contact
+
+For any questions, concerns, or issues with DCVBin, please contact LiuYF via email at 17837410609@163.com, or create an issue on the [GitHub Issues page](https://github.com/dengdengf/dcvbin/issues).
+
+Thank you for using DCVBin!
