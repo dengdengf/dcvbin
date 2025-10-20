@@ -28,7 +28,10 @@ To install **DCVBin**, follow these steps:
 2. **Create and activate a conda environment** using the provided `.yaml` file in the `envs` directory:
 
     ```bash
-    conda env create -f envs/dcvbin_env.yaml
+    conda env create -f envs/checkm2.yaml
+    conda env create -f envs/copygen.yaml
+    conda env create -f envs/dnaberts.yaml
+    conda create --name vambnew --file envs/vambnew.lock
     conda activate dcvbin_env
     ```
 
