@@ -35,6 +35,7 @@ To install **DCVBin**, follow these steps:
     conda activate dcvbin_env
     ```
 
+
 ## Usage
 
 ### 1. **Basic Mode (without CPT)**
@@ -64,6 +65,17 @@ For the **CPT mode**, use the `my_method_fur.sh` script to run the process with 
 
     - `input_dir`: Directory containing your `.fasta` files.
     - `output_dir`: Directory where the output MAGs will be saved.
+
+The `DNABERT_S-main` directory is too large for GitHub and has been uploaded to Figshare:
+
+**Download Link**: https://figshare.com/account/items/30400258/edit
+
+If you need to use CPT mode, you must:
+
+1. **Download** the compressed file from the above link
+2. **Extract** the archive to your project root directory:
+   ```bash
+   tar -xzf DNABERT_S-main.tar.gz
 
 ### Example:
 
