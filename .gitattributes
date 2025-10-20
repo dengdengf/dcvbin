@@ -1,0 +1,4 @@
+# Track specific .gz files with Git LFS
+data/test_1.fastq.gz filter=lfs diff=lfs merge=lfs -text
+data/test_2.fastq.gz filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
