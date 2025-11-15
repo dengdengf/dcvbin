@@ -82,13 +82,13 @@ If you need to use CPT mode, you must:
 To run in **basic mode**:
 
 ```bash
-bash my_method.sh ./data/input ./data/output
+bash my_method.sh ./data ./data/output
 ```
 
 To run in CPT mode:
 
 ```bash 
-bash my_method_fur.sh ./data/input ./data/output
+bash my_method_fur.sh ./data ./data/output
 ```
 
 Contact
